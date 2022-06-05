@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Song {
+class Song: Codable{
     let title: String
     let artist: String
     

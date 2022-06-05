@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Category {
+class Category:Codable {
     let title: String
     let subTitle: String
     let albums: [Album]
