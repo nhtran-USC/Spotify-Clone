@@ -14,7 +14,7 @@ class CategoryService{
         if let categoriesUrl = Bundle.main.url(forResource: "categories", withExtension: "json") {
             let data = try! Data(contentsOf: categoriesUrl)
             let decoder = JSONDecoder()
-            categories = try! decoder.decode([Category].self, from: data)
+            self.categories = try! decoder.decode([Category].self, from: data)
         }
         else {
             print("error")
