@@ -11,13 +11,10 @@ class CategoryService{
     
     let categories: [Category]
     private init(){
-        if let categoriesUrl = Bundle.main.url(forResource: "categories", withExtension: "json") {
-            let data = try! Data(contentsOf: categoriesUrl)
-            let decoder = JSONDecoder()
-            self.categories = try! decoder.decode([Category].self, from: data)
-        }
-        else {
-            print("error")
-        }
+    let categoriesUrl = Bundle.main.url(forResource: "categories", withExtension: "json")!
+        let data = try! Data(contentsOf: categoriesUrl)
+        let decoder = JSONDecoder()
+        self.categories = try! decoder.decode([Category].self, from: data)
+    
     }
 }

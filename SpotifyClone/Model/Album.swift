@@ -10,13 +10,13 @@ class Album:Codable {
     let name: String
     let artist: String
     let image: String
-    let Songs: [Song]
+    let songs: [Song]
     
-    init(name: String, artist: String, image: String, Songs: [Song]) {
+    init(name: String, artist: String, image: String, songs: [Song]) {
         self.name = name
         self.artist = artist
         self.image = image
-        self.Songs = Songs
+        self.songs = songs
     }
     
     

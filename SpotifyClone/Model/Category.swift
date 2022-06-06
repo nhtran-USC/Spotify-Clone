@@ -8,12 +8,12 @@
 import Foundation
 class Category:Codable {
     let title: String
-    let subTitle: String
+    let subtitle: String
     let albums: [Album]
     
-    init(title: String, subTitle: String, albums: [Album]) {
+    init(title: String, subtitle: String, albums: [Album]) {
         self.title = title
-        self.subTitle = subTitle
+        self.subtitle = subtitle
         self.albums = albums
     }
 }
