@@ -17,4 +17,5 @@ class AlbumCell: UICollectionViewCell {
         albumTitleLabel.text = album.name
         artistLabel.text = album.artist
     }
+    
 }

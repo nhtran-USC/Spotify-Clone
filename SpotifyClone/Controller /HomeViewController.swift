@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         categories = CategoryService.shared.categories
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let albumViewController = segue.destination as! AlbumViewController
+        albumViewController.album = 
+    }
 }
 
 extension HomeViewController: UITableViewDataSource{
@@ -43,6 +47,4 @@ extension HomeViewController: UICollectionViewDataSource {
         cell.update(album: album)
         return cell
     }
-    
-    
 }
