@@ -107,12 +107,12 @@
                                                                         <outlet property="albumImageView" destination="rme-Uy-uVU" id="y77-MM-1Qy"/>
                                                                         <outlet property="albumTitleLabel" destination="Nv0-F9-AV0" id="9gm-2Z-ofs"/>
                                                                         <outlet property="artistLabel" destination="eqQ-sn-F50" id="SG0-ci-Uf2"/>
-                                                                        <segue destination="gLe-Xc-oVx" kind="show" identifier="AlbumSegue" id="yMt-3J-5xp"/>
                                                                     </connections>
                                                                 </collectionViewCell>
                                                             </cells>
                                                             <connections>
                                                                 <outlet property="dataSource" destination="BYZ-38-t0r" id="YCu-ZM-tU2"/>
+                                                                <outlet property="delegate" destination="BYZ-38-t0r" id="4ZB-tz-x5V"/>
                                                             </connections>
                                                         </collectionView>
                                                     </subviews>
@@ -156,6 +156,9 @@
                     <navigationItem key="navigationItem" id="Vcd-8U-7uO">
                         <barButtonItem key="backBarButtonItem" title=" " id="Wfb-W5-Euu"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="gLe-Xc-oVx" kind="show" identifier="AlbumSegue" id="p4U-S6-qyN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -315,6 +318,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Nx7-c1-AaO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jx7-OF-gt1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3hj-X3-bU8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9a1-fb-uNB">
@@ -327,7 +331,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tP9-xl-9ZT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jx7-OF-gt1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="71" y="106"/>
         </scene>

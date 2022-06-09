@@ -20,12 +20,13 @@ class AlbumViewController: UIViewController {
     
     @IBOutlet weak var shuffleButton: UIButton!
     
-    var album: Album
+    var album: Album!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = false
         // update button
         shuffleButton.layer.cornerRadius = 10
         followButton.layer.cornerRadius = 5
