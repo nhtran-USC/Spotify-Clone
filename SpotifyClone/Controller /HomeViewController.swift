@@ -20,7 +20,13 @@ class HomeViewController: UIViewController {
         let albumViewController = segue.destination as! AlbumViewController
         albumViewController.album = selectedAlbum
     }
+    // turn off nav bar after going to AlbumVC
+    override func viewWillAppear(_ animated: Bool) {
+        CategoryService.shared.categories
+        navigationController?.isNavigationBarHidden = true
+    }
 }
+
 
 extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

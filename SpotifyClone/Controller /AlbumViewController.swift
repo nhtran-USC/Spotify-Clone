@@ -27,6 +27,10 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.isNavigationBarHidden = false
+        // tranparent nav bar
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
         // update button
         shuffleButton.layer.cornerRadius = 10
         followButton.layer.cornerRadius = 5
@@ -50,12 +54,16 @@ class AlbumViewController: UIViewController {
         updateBackgroundColor(with: primaryColor)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     func updateBackgroundColor(with color: CGColor) {
         let backgroundColor = view.backgroundColor!.cgColor
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [color, backgroundColor]
-        gradientLayer.locations = [0, 0.4]
+        gradientLayer.locations = [0, 0.5]
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
