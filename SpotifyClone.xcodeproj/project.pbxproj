@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44990EE128564379007B5C94 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44990EE028564378007B5C94 /* SongViewController.swift */; };
 		44D3A434284C142200D93BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A433284C142200D93BB0 /* AppDelegate.swift */; };
 		44D3A436284C142200D93BB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D3A435284C142200D93BB0 /* SceneDelegate.swift */; };
 		44D3A43B284C142200D93BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D3A439284C142200D93BB0 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44990EE028564378007B5C94 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		44D3A430284C142200D93BB0 /* SpotifyClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D3A433284C142200D93BB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D3A435284C142200D93BB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				44D3A472284C6D5800D93BB0 /* HomeViewController.swift */,
 				44D3A47A2850189000D93BB0 /* AlbumViewController.swift */,
+				44990EE028564378007B5C94 /* SongViewController.swift */,
 			);
 			path = "Controller ";
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				44D3A47F285110C200D93BB0 /* User.swift in Sources */,
 				44D3A473284C6D5800D93BB0 /* HomeViewController.swift in Sources */,
 				44D3A46A284C15B200D93BB0 /* Album.swift in Sources */,
+				44990EE128564379007B5C94 /* SongViewController.swift in Sources */,
 				44D3A4862852817000D93BB0 /* AudioService.swift in Sources */,
 				44D3A477284D50A600D93BB0 /* AlbumCell.swift in Sources */,
 			);

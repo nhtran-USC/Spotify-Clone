@@ -21,7 +21,7 @@ class AlbumViewController: UIViewController {
     @IBOutlet weak var shuffleButton: UIButton!
     
     var album: Album!
-    
+    var selectedSongIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,16 @@ class AlbumViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      // Get the new view controller.
+       if let songVC = segue.destination as? SongViewController {
+          // Fetch the image for the selected row.
+           songVC.selectedAlbum = album
+           songVC.selectedSongIndex = selectedSongIndex
+       }
+    }
+    
     
     func updateBackgroundColor(with color: CGColor) {
         let backgroundColor = view.backgroundColor!.cgColor
@@ -111,4 +121,13 @@ extension AlbumViewController: UITableViewDataSource {
     }
     
     
+}
+
+
+extension AlbumViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        selectedSong = album.songs[indexPath]
+        selectedSongIndex = indexPath.row
+            performSegue(withIdentifier: "SongSegue", sender: selectedSongIndex)
+    }
 }
